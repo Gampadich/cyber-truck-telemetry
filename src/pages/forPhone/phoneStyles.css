@@ -1,0 +1,43 @@
+/* Головний контейнер сторінки */
+.phoneDashboard {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000; /* Глибокий чорний */
+  color: #ffffff;            /* ✅ Весь текст стає білим */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+/* Рядок для приладів (Спідометр + Тахометр) */
+.dashboard-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Відступ між приладами */
+  margin-bottom: 20px;
+  
+  /* Адаптація: якщо екран малий, зменшуємо прилади */
+  transform: scale(0.85); 
+}
+
+/* Стиль для текстових написів (Gear, Fuel text) */
+h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ccc; /* Трохи сірий, щоб не різав очі */
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+/* Якщо ми додамо значення передачі окремо */
+.gear-value {
+  color: #00ffcc; /* Неоновий ціан */
+  font-weight: bold;
+  font-size: 2rem;
+}

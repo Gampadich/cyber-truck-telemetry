@@ -15,7 +15,7 @@ const io = new Server(server, {
     }
 });
 
-const telemetry = truckSimTelemetry();
+const telemetry = truckSimTelemetry;
 
 io.on('connection', (socket) => {
     console.log('Client connected:', socket.id);

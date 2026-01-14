@@ -1,0 +1,101 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 90%);
+  overflow: hidden; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.text {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.devicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; 
+}
+
+.divForPhone, .divForTablet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  background-color: #0a0a0a;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.divForPhone .text, .divForTablet .text {
+  margin: 0;
+  color: #e0e0e0; 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  text-align: center;
+  padding: 0 15px;
+  line-height: 1.4;
+}
+
+.divForPhone {
+  width: 320px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.divForPhone::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 40px;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.divForTablet {
+  width: 360px;
+  height: 240px;
+  border-radius: 15px;
+}
+
+.divForPhone:hover, .divForTablet:hover {
+  border-color: #fff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.divForPhone:hover .text, .divForTablet:hover .text {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+a {
+  text-decoration: none;
+}
