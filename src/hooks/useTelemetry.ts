@@ -22,7 +22,7 @@ export const useTelemetry = () => {
     const [data, setData] = useState<TruckData>(initialData)
 
     useEffect(() => {
-        const socket = io('http://localhost:3000')
+        const socket = io('http://192.168.3.3:3000');
 
         socket.on('telemetry', (incomingData : TruckData) => {
             setData(incomingData)

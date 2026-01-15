@@ -1,9 +1,8 @@
-/* Головний контейнер сторінки */
 .phoneDashboard {
   width: 100vw;
   height: 100vh;
-  background-color: #000000; /* Глибокий чорний */
-  color: #ffffff;            /* ✅ Весь текст стає білим */
+  background-color: #000000;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,32 +11,61 @@
   overflow: hidden;
 }
 
-/* Рядок для приладів (Спідометр + Тахометр) */
 .dashboard-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Відступ між приладами */
+  gap: 40px;
   margin-bottom: 20px;
-  
-  /* Адаптація: якщо екран малий, зменшуємо прилади */
-  transform: scale(0.85); 
+  transform: scale(0.85);
 }
 
-/* Стиль для текстових написів (Gear, Fuel text) */
 h2 {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #ccc; /* Трохи сірий, щоб не різав очі */
+  color: #ccc;
   margin-top: 10px;
   font-size: 1.5rem;
 }
 
-/* Якщо ми додамо значення передачі окремо */
 .gear-value {
-  color: #00ffcc; /* Неоновий ціан */
+  color: #00ffcc;
   font-weight: bold;
   font-size: 2rem;
+}
+
+.panel {
+  display: flex;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #9c9c9c;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.backButton:hover {
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(166, 166, 166, 0.6);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.backButton:active {
+  transform: translateX(-50%) scale(0.95);
 }
