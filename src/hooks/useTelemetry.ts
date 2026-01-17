@@ -9,13 +9,14 @@ export interface TruckData {
         rpm : number;
         gear : string | number;
         fuel : number;
+        odometer : number
     }
 }
 
 const initialData : TruckData = {
     connected : false,
     game : 'offline',
-    truck : { speed: 0, rpm : 0, gear: 'N', fuel: 0 }
+    truck : { speed: 0, rpm : 0, gear: 'N', fuel: 0, odometer : 0 }
 }
 
 export const useTelemetry = () => {

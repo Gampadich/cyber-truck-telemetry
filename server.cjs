@@ -65,6 +65,7 @@ setInterval(() => {
         speed: Math.floor(gameData.truck.speed * 3.6),
         rpm: Math.floor(gameData.truck.engine.rpm),
         gear: gameData.truck.transmission.gear.displayed || "N",
+        odometer: telemetry.truck.odometer,
         fuel: gameData.truck.fuel.value,
         source: "REAL_GAME",
       },

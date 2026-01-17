@@ -1,0 +1,84 @@
+.odometer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+}
+
+.odometer-label {
+  font-size: 10px;
+  color: #888;
+  margin-bottom: 4px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.odometer-display {
+  display: flex;
+  background: #000;
+  padding: 2px;
+  border-radius: 2px;
+  gap: 2px; 
+}
+
+.odometer-window {
+  width: 24px;
+  height: 36px;
+  overflow: hidden;
+  background: #222; 
+  position: relative;
+  border-radius: 2px;
+}
+
+.odometer-strip {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s cubic-bezier(0.15, 0.8, 0.3, 1.2); 
+  height: 1000%; 
+}
+
+.odometer-num {
+  height: 10%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", monospace; 
+  font-weight: bold;
+  font-size: 20px;
+  color: #eee;
+}
+
+.odometer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.8),
+    inset 0 -5px 5px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.last-digit {
+  background: #8b0000;
+  border-left: 1px solid #000; 
+}
+
+.last-digit .odometer-num {
+  color: #ffffff; 
+  font-weight: 900;
+}
+
+.odometer-display {
+  background: #111;
+  padding: 4px;
+  border-radius: 4px;
+  gap: 1px; 
+  box-shadow: inset 0 0 10px #000;
+}
